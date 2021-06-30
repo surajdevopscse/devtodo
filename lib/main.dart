@@ -58,6 +58,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void openOnBoard() {
-    Navigator.pushNamed(context, OnBoarding.routeName);
+    Navigator.pushReplacement<void, void>(
+      context,
+      MaterialPageRoute<void>(
+        builder: (BuildContext context) => OnBoarding(),
+      ),
+    );
   }
 }
